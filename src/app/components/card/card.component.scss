@@ -1,0 +1,112 @@
+ion-content {
+  --background: transparent;
+}
+.grass-background{
+  background-color: #8BBE8A; 
+}
+
+.fire-background {
+  background-color: #FFA756; 
+}
+
+.water-background {
+  background-color: #58ABF6; 
+}
+
+.electric-background {
+  background-color: #F2CB55; 
+}
+
+.ice-background {
+  background-color: #98d8d8; 
+}
+
+.psychic-background {
+  background-color: #f85888; 
+}
+
+.ghost-background {
+  background-color: #705898; 
+}
+
+.dark-background {
+  background-color: #705848;
+}
+
+.fairy-background {
+  background-color: #ee99ac;
+}
+
+.dragon-background {
+  background-color: #7038f8; 
+}
+
+.normal-background {
+  background-color: #B5B9C4;
+}
+
+.fighting-background {
+  background-color: #EB4971; 
+}
+
+.poison-background {
+  background-color: #9F6E97; 
+}
+
+.ground-background {
+  background-color: #F78551; 
+}
+
+
+.cardInfo {
+  height: 150px;
+}
+
+.contentCard {
+  width: 100%;
+}
+
+.infoContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+}
+
+.info {
+  padding: 10px; 
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+
+}
+
+ion-card-title {
+  font-size: 1.5rem;
+}
+
+.imagePokemon {
+  width: 130px; 
+  height: 130px;
+  object-fit: cover;
+}
+
+.chipTypes {
+  height: fit-content;
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+
+  span {
+    width: fit-content;
+    height: auto;
+    border-radius: 4px;
+    padding: 5px 10px;
+    border: 1px solid #d5d5d5;
+  }
+
+  p {
+    color: #fff;
+  }
+}
