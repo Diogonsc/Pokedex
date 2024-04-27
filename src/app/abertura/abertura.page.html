@@ -6,19 +6,21 @@
 
 
  <ion-content [fullscreen]="true">
-   <ion-header collapse="condense">
-     <ion-toolbar>
-     
-     </ion-toolbar>
-   </ion-header>
 
-  <img src="/assets/image/pokemon.jpg"/>
+  <div class="boxImageAbertura">
+    <img src="/assets/image/pokemon.jpg"/>
+  </div>
+  
+  <!-- <div class="boxImageBackground"></div> -->
 
-  <div>
+  <div class="BoxImagePokemon">
     <img src="/assets/image/tress.png"/>
   </div>
-  <ion-button expand="full">Vamos agora Pokémons</ion-button> 
-  <ion-button color="medium" expand="full"> não tenho cadastro</ion-button>
+
+  <div class="btns">
+    <ion-button class="btn" expand="full" (click)="redirectToLogin()">Vamos agora Pokémons</ion-button> 
+    <ion-button class="btn" color="medium" expand="full" (click)="redirectToCadastro()"> não tenho cadastro</ion-button>
+  </div>
   
   
 </ion-content>

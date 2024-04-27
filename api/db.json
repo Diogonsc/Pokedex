@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id": "2500",
+      "name": "Diogo Nascimento dos Santos",
+      "email": "diogos.nascimento@outlook.com",
+      "password": "0123456"
+    },
+    {
+      "id": "8563",
+      "name": "Diogo Nascimento dos Santos",
+      "email": "diogos.nascimento@outlook.com",
+      "password": "012346"
+    }
+  ]
+}

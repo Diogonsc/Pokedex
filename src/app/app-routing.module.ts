@@ -3,6 +3,10 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'abertura',
+    loadChildren: () => import('./abertura/abertura.module').then( m => m.AberturaPageModule)
+  },
+  {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
@@ -10,11 +14,8 @@ const routes: Routes = [
     path: 'informacao',
     loadChildren: () => import('./informacao/informacao.module').then( m => m.InformacaoPageModule)
   },
+  
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
@@ -23,10 +24,10 @@ const routes: Routes = [
     loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule)
   },
   {
-    path: 'abertura',
-    loadChildren: () => import('./abertura/abertura.module').then( m => m.AberturaPageModule)
+    path: '',
+    redirectTo: 'abertura',
+    pathMatch: 'full'
   },
-
 ];
 
 @NgModule({

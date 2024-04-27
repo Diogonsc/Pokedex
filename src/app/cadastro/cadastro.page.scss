@@ -1,8 +1,66 @@
-.bg {
-    background: linear-gradient(to top, #904779 0%, #fff 100%);
-}
-
-ion-content {
-
-    background: #904779 !important;
-}
+.boxImage {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .wellcome {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin: 1rem 0;
+    text-align: center;
+  }
+  
+  .wellcome h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #333;
+    padding: 1rem 0 0 0;
+    text-align: center;
+  
+  }
+  
+  .wellcome p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #333;
+    margin: 1rem 0;
+    text-align: center;
+  
+  }
+  
+  .formulario {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .formulario form {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  
+  .input {
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  .btns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+  }

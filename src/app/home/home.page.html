@@ -6,7 +6,9 @@
 
 <ion-content [fullscreen]="true">
 
-  <img src="/assets/image/pokemon.jpg"/>
+  <div class="boxImage">
+    <img src="/assets/image/pokemon.jpg"/>
+  </div>
 
   <div class="search">
     <ion-input id="input" type="search" label="Digite o nome do Pokémon" label-placement="floating" fill="outline" placeholder="Pesquisar..." (ionInput)="searchPokemon($event)"></ion-input>

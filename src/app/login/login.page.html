@@ -1,27 +1,44 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
-  <ion-title>logar no Pokemon Cards</ion-title>
+    <ion-title>logar no Pokemon Cards</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content >
+<ion-content>
+  <div class="boxImage">
+    <img src="/assets/image/pokemon.jpg" />
+  </div>
 
-  <img src="/assets/image/pokemon.jpg"/>
- 
-  <ion-input label="Email" label-placement="floating" placeholder="digite seu email"></ion-input>
+  <div class="wellcome">
+    <h3>Bem vindo ao Pokemon Cards</h3>
+    <p>
+      O melhor lugar para você encontrar as cartas de pokemon que você deseja
+    </p>
+  </div>
 
-      <ion-item>
-        <ion-label>Senha:</ion-label>
-        <ion-input type="password" formcontrolname="senha"></ion-input>
-      </ion-item>
-
-       <ion-button expand="full">Logar</ion-button> 
-       <ion-button color="secondary">Esqueci a Senha</ion-button>
-
-       
-
-
-       
-       
-
+  <div class="formulario">
+    <form>
+      <ion-input
+        class="input"
+        label="Email"
+        label-placement="floating"
+        placeholder="Digite seu email"
+        name="email"
+        [(ngModel)]="user.email"
+      ></ion-input>
+      <ion-input
+        class="input"
+        label="Senha"
+        type="password"
+        label-placement="floating"
+        placeholder="Digite sua senha"
+        name="password"
+        [(ngModel)]="user.password"
+      ></ion-input>
+      <div class="btns">
+        <ion-button class="btn" expand="full" (click)="handleLogin(user)">Logar</ion-button>
+        <ion-button class="btn" color="secondary">Esqueci a Senha</ion-button>
+      </div>
+    </form>
+  </div>
 </ion-content>
