@@ -2,33 +2,33 @@ import { Component } from '@angular/core';
 import axios from 'axios';
 import { AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
-export class LoginPage {
-  user = { email: '', password: '' };
-  constructor(public alertController: AlertController, private router: Router) {}
 
-  async handleLogin(user: { email: string; password: string }) {
-    axios.get(`http://localhost:3000/users`).then(async (res) => {
-      const foundUser = res.data.find(
-        (u: any) => u.email === user.email && u.password === user.password
-      );
-      if (foundUser) {
-        this.router.navigateByUrl('home');
-      } else {
-        const alert = await this.alertController.create({
-          header: 'Erro',
-          subHeader: 'Usuário não encontrado',
-          message:
-            'O email ou a senha que você inseriu estão incorretos. Por favor, tente novamente.',
-          buttons: ['OK'],
-        });
-        await alert.present();
-      }
-    });
+export class LoginPage {
+   public email:string=''
+   public password:string=''
+  constructor(public ngFireAuth: AngularFireAuth,private router:Router) {}
+
+  async handleLogin(email:string, password:string) {
+   this.ngFireAuth.signInWithEmailAndPassword(email, password)
+   .then((res)=> {
+    this.router.navigate(['app/home'])
+   }).catch((error)=>{
+    console.log(error)
+   })
+   
+
   }
+
+  async handleCreate(email:string,password:string) { 
+    return this.ngFireAuth.createUserWithEmailAndPassword(email, password)
+  }
+
+
 }

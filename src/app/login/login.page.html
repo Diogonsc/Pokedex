@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
-    <ion-title>logar no Pokemon Cards</ion-title>
+    <ion-title> Pokemon Cards</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -25,7 +25,7 @@
         label-placement="floating"
         placeholder="Digite seu email"
         name="email"
-        [(ngModel)]="user.email"
+        [(ngModel)]="email"
       ></ion-input>
       <ion-input
         class="input"
@@ -34,10 +34,10 @@
         label-placement="floating"
         placeholder="Digite sua senha"
         name="password"
-        [(ngModel)]="user.password"
+        [(ngModel)]="password"
       ></ion-input>
       <div class="btns">
-        <ion-button class="btn" expand="full" (click)="handleLogin(user)">Logar</ion-button>
+        <ion-button class="btn" expand="full" (click)="handleLogin(email,password)">Logar</ion-button>
         <ion-button class="btn" color="secondary">Esqueci a Senha</ion-button>
       </div>
     </form>
